@@ -14,7 +14,7 @@ app.post("/payment", cors(), async (req, res) => {
   let { amount, id } = req.body;
   try {
     const payment = await stripe.paymentIntents.create({
-      amount:1000,
+      amount:10000,
       currency: "INR",
       description: "Flickers Incorp.",
       payment_method: id,
